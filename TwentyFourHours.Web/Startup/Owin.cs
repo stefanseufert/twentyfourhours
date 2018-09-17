@@ -15,7 +15,7 @@ namespace TwentyFourHours.Web.Startup
 #if DEBUG
                 .UseErrorPage()
 #endif         
-                .MapHubs()
+                .MapSignalR()
                 .UseNancy();
         }
     }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Nancy.Conventions;
+using Nancy.Bootstrapper;
 
 namespace TwentyFourHours.Web.Startup
 {
@@ -12,6 +13,8 @@ namespace TwentyFourHours.Web.Startup
     {
         protected override void ConfigureConventions(NancyConventions nancyConventions)
         {
+            nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("Scripts"));
+
             base.ConfigureConventions(nancyConventions);
         }
     }
